@@ -82668,6 +82668,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var single_spa_angular__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(single_spa_angular__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app/app.module */ "./src/app/app.module.ts");
 /* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
+
 
 
 
@@ -82681,6 +82684,8 @@ if (_environments_environment__WEBPACK_IMPORTED_MODULE_5__["environment"].produc
     mainModule: _app_app_module__WEBPACK_IMPORTED_MODULE_4__["AppModule"],
     angularPlatform: Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformBrowserDynamic"])(),
     template: '<app-root />',
+    Router: _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"],
+    ApplicationRef: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ApplicationRef"],
     domElementGetter: function () {
         var containerEl = document.getElementById('<app');
         if (!containerEl) {

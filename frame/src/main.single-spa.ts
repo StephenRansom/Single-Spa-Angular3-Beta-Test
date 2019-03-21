@@ -6,6 +6,8 @@ import singleSpaAngular from 'single-spa-angular';
 
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
+import { Router } from '@angular/router';
+import {ApplicationRef} from '@angular/core';
 
 if (environment.production) {
   enableProdMode();
@@ -14,7 +16,9 @@ if (environment.production) {
 export default singleSpaAngular({
   mainModule: AppModule,
   angularPlatform: platformBrowserDynamic(),
-  template: '<app-root />',
+  template: '<app-root />',  
+  Router,
+  ApplicationRef,
   domElementGetter() {
     let containerEl = document.getElementById('<app');
     if (!containerEl) {
