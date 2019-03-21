@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Angular test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/" />
+</head>
+<body>
+  <script src="https://unpkg.com/zone.js"></script>
+  <script src="https://unpkg.com/single-spa/lib/umd/single-spa.js"></script>
+  <script src="/frame/dist/frame/main.js"></script>
+  <script src="/app1/dist/app1/main.js"></script>
+
+  <script>
+    singleSpa.registerApplication('frame', window.frame.default, location => true);
+    singleSpa.registerApplication('app1', window.app1.default, location => true);
+
+    singleSpa.start();
+  </script>
+
+    This is root index.html
+    <button onclick="singleSpaNavigate('/frame')">frame Button</button>
+    <button onclick="singleSpaNavigate('/app1')">App1 Button</button>
+
+</body>
+</html>
