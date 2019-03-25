@@ -1,5 +1,5 @@
 {
-  "name": "frame",
+  "name": "navbar",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:single-spa": "ng run frame:single-spa"
+    "build:single-spa": "ng run navbar:single-spa",
+    "serve:single-spa": "ng run navbar:single-spa-serve"
   },
   "private": true,
   "dependencies": {
@@ -22,7 +23,7 @@
     "@angular/router": "~7.2.0",
     "core-js": "^2.5.4",
     "rxjs": "~6.3.3",
-    "single-spa-angular": "^3.0.0-beta.3",
+    "single-spa-angular": "^3.0.0-beta.5",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },

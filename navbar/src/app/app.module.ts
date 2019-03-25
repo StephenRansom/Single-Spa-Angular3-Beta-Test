@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {APP_BASE_HREF} from '@angular/common';
+import { APP_BASE_HREF } from '@angular/common';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule
   ],
-  providers: [{provide: APP_BASE_HREF, useValue: '/app1/'}],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

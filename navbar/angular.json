@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "frame": {
+    "navbar": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "single-spa-angular:build",
           "options": {
-            "outputPath": "dist/frame",
+            "outputPath": "dist/navbar",
             "index": "src/index.html",
             "main": "src/main.single-spa.ts",
             "polyfills": "src/polyfills.ts",
@@ -56,20 +56,20 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "single-spa-angular:dev-server",
           "options": {
-            "browserTarget": "frame:build"
+            "browserTarget": "navbar:single-spa"
           },
           "configurations": {
             "production": {
-              "browserTarget": "frame:build:production"
+              "browserTarget": "navbar:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "frame:build"
+            "browserTarget": "navbar:build"
           }
         },
         "test": {
@@ -104,7 +104,7 @@
         "single-spa": {
           "builder": "single-spa-angular:build",
           "options": {
-            "outputPath": "dist/frame",
+            "outputPath": "dist/navbar",
             "index": "src/index.html",
             "main": "src/main.single-spa.ts",
             "polyfills": "src/polyfills.ts",
@@ -145,10 +145,21 @@
               ]
             }
           }
+        },
+        "single-spa-serve": {
+          "builder": "single-spa-angular:dev-server",
+          "options": {
+            "browserTarget": "navbar:single-spa"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "navbar:build:production"
+            }
+          }
         }
       }
     },
-    "frame-e2e": {
+    "navbar-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -157,11 +168,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "frame:serve"
+            "devServerTarget": "navbar:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "frame:serve:production"
+              "devServerTarget": "navbar:serve:production"
             }
           }
         },
@@ -177,5 +188,5 @@
       }
     }
   },
-  "defaultProject": "frame"
+  "defaultProject": "navbar"
 }
