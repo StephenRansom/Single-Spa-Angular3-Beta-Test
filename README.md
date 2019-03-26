@@ -1,3 +1,9 @@
-2 angular 7 apps run under index.html by using single spa angular (beta 5)
+# To run:
 
-npm install first and run npx serve --single
+in each app folder
+
+``npm install``
+
+from root folder
+
+```npx serve --single```
