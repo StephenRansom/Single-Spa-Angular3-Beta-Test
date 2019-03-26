@@ -1,9 +1,10 @@
 import 'core-js/es7/reflect';
-
 import { enableProdMode, ApplicationRef } from '@angular/core';
+
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import singleSpaAngular from 'single-spa-angular';
 import { Router } from '@angular/router';
+import singleSpaAngular from 'single-spa-angular';
+
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
@@ -14,9 +15,9 @@ if (environment.production) {
 export default singleSpaAngular({
   mainModule: AppModule,
   angularPlatform: platformBrowserDynamic(),
-  template: '<app-root />',
-  ApplicationRef,
+  template: '<app-root1 />',
   Router,
+  ApplicationRef,
   domElementGetter() {
     let containerEl = document.getElementById('app1');
     if (!containerEl) {

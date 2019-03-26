@@ -1,6 +1,6 @@
 import 'core-js/es7/reflect';
-
 import { enableProdMode, ApplicationRef } from '@angular/core';
+
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { Router } from '@angular/router';
 import singleSpaAngular from 'single-spa-angular';
@@ -16,13 +16,11 @@ export default singleSpaAngular({
   mainModule: AppModule,
   angularPlatform: platformBrowserDynamic(),
   template: '<app-root />',
-  Router,
-  ApplicationRef,
   domElementGetter() {
-    let containerEl = document.getElementById('navbar');
+    let containerEl = document.getElementById('home');
     if (!containerEl) {
       containerEl = document.createElement('div');
-      containerEl.id = 'navbar';
+      containerEl.id = 'home';
       document.body.appendChild(containerEl);
     }
 

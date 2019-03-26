@@ -10,21 +10,23 @@
 <body>
   <script src="https://unpkg.com/zone.js"></script>
   <script src="https://unpkg.com/single-spa/lib/umd/single-spa.min.js"></script>
-  <script src="/navbar/dist/navbar/main.js"></script>
+  <script src="/home/dist/home/main.js"></script>
   <script src="/app1/dist/app1/main.js"></script>
   <script>
-    function pathPrefix(prefix) {
-        return function(location) {
-            return location.pathname.startsWith(`${prefix}`);
-        }
-    }
-  </script>
-  <script>
-    singleSpa.registerApplication('navbar', window.navbar.default, pathPrefix('/'));
-    singleSpa.registerApplication('app1',window.app1.default, pathPrefix('/app1'));
+    singleSpa.registerApplication('home', window.home.default, location => true);
+    // singleSpa.registerApplication('app1', window.app1.default, location => location.pathname.startsWith('/app1'));
+    singleSpa.registerApplication('app1', window.app1.default, location => true);
+
+
     singleSpa.start();
   </script>
-  
-  This is the main index.html
+
+<a href="#" onclick="singleSpaNavigate('/app1')">app1</a>
+<a href="#" onclick="singleSpaNavigate('/')">home</a>
+
+  <div id="home"></div>
+  <div id="app1"></div>
+
+
 </body>
 </html>

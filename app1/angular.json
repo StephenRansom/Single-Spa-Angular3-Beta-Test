@@ -56,9 +56,9 @@
           }
         },
         "serve": {
-          "builder": "single-spa-angular:dev-server",
+          "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "app1:single-spa"
+            "browserTarget": "app1:build"
           },
           "configurations": {
             "production": {
@@ -145,21 +145,10 @@
               ]
             }
           }
-        },
-        "single-spa-serve": {
-          "builder": "single-spa-angular:dev-server",
-          "options": {
-            "browserTarget": "app1:single-spa"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "app1:build:production"
-            }
-          }
         }
       }
     },
-    "app1-e2e": {
+    "home-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -168,11 +157,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "app1:serve"
+            "devServerTarget": "home:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "app1:serve:production"
+              "devServerTarget": "home:serve:production"
             }
           }
         },
